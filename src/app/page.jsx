@@ -1,4 +1,5 @@
 import CategoriesSection from "./components/categoriesSection";
+import CreatorsSection from "./components/creatorsSection";
 import FeaturedMemesSection from "./components/featuredMemesSection";
 import Feed from "./components/feed";
 import Footer from "./components/footer";
@@ -117,6 +118,7 @@ export default function Home() {
                 />
             </div>
           </section>
+          <CreatorsSection />
         </div>
       </div>
       <Footer />
