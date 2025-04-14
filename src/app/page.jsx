@@ -1,3 +1,4 @@
+import CategoriesSection from "./components/categoriesSection";
 import Footer from "./components/footer";
 import Header from "./components/header";
 import HeroSection from "./components/heroSection";
@@ -10,6 +11,7 @@ export default function Home() {
       <div className={styles.mainContent}>
         <div className={styles.contentArea}>
           <HeroSection />
+          <CategoriesSection />
         </div>
       </div>
       <Footer />
