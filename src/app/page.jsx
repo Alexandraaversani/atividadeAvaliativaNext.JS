@@ -6,6 +6,7 @@ import Footer from "./components/footer";
 import Header from "./components/header";
 import HeroSection from "./components/heroSection";
 import NewsLetterSection from "./components/newsLetterSection";
+import SideBar from "./components/sideBar";
 import styles from "./page.module.css";
 
 export default function Home() {
@@ -122,6 +123,7 @@ export default function Home() {
           <CreatorsSection />
           <NewsLetterSection />
         </div>
+        <SideBar />
       </div>
       <Footer />
     </div>
