@@ -5,6 +5,7 @@ import Feed from "./components/feed";
 import Footer from "./components/footer";
 import Header from "./components/header";
 import HeroSection from "./components/heroSection";
+import NewsLetterSection from "./components/newsLetterSection";
 import styles from "./page.module.css";
 
 export default function Home() {
@@ -119,6 +120,7 @@ export default function Home() {
             </div>
           </section>
           <CreatorsSection />
+          <NewsLetterSection />
         </div>
       </div>
       <Footer />
