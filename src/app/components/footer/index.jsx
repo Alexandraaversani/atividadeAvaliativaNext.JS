@@ -1,6 +1,6 @@
-import styles from './footer.module.css';
+import styles from "./footer.module.css";
 
-const Footer = () => {
+const Footer = ({ footerData, socialLinks }) => {
     return (
         <footer className={styles.footer}>
             <div className={styles.footerTop}>
@@ -10,68 +10,35 @@ const Footer = () => {
                 </div>
 
                 <div className={styles.footerNavContainer}>
-                    <div className={styles.footerNavSection}>
-                        <h3>Navegação</h3>
-                        <nav className={styles.footerNav}>
-                            <a href="#">Home</a>
-                            <a href="#">Trending</a>
-                            <a href="#">Create</a>
-                            <a href="#">Categories</a>
-                            <a href="#">Profile</a>
-                        </nav>
-                    </div>
 
-                    <div className={styles.footerNavSection}>
-                        <h3>Recursos</h3>
-                        <nav className={styles.footerNav}>
-                            <a href="#">Editor de Memes</a>
-                            <a href="#">Templates</a>
-                            <a href="#">API</a>
-                            <a href="#">Para Desenvolvedores</a>
-                        </nav>
-                    </div>
+                    {footerData.map((item, index) => (
+                        <div className={styles.footerNavSection} key={index}>
+                            <h3>{item.title}</h3>
+                            <nav className={styles.footerNav}>
+                                {item.links.map((link, linkIndex) => (
+                                    <a href="#" key={linkIndex}>
+                                        {link}
+                                    </a>
+                                ))}
+                            </nav>
+                        </div>
+                    ))}
 
-                    <div className={styles.footerNavSection}>
-                        <h3>Empresa</h3>
-                        <nav className={styles.footerNav}>
-                            <a href="#">Sobre nós</a>
-                            <a href="#">Carreiras</a>
-                            <a href="#">Blog</a>
-                            <a href="#">Contato</a>
-                        </nav>
-                    </div>
-
-                    <div className={styles.footerNavSection}>
-                        <h3>Legal</h3>
-                        <nav className={styles.footerNav}>
-                            <a href="#">Termos de Uso</a>
-                            <a href="#">Privacidade</a>
-                            <a href="#">Cookies</a>
-                            <a href="#">LGPD</a>
-                        </nav>
-                    </div>
                 </div>
             </div>
 
             <div className={styles.footerBottom}>
                 <p>© 2025 MemeVerse - Todos os direitos reservados</p>
                 <div className={styles.socialLinks}>
-                    <a href="#" className={styles.socialLink}>
-                        <span>📱</span>
-                    </a>
-                    <a href="#" className={styles.socialLink}>
-                        <span>📘</span>
-                    </a>
-                    <a href="#" className={styles.socialLink}>
-                        <span>📸</span>
-                    </a>
-                    <a href="#" className={styles.socialLink}>
-                        <span>🐦</span>
-                    </a>
+                    {socialLinks.map((item, index) => (
+                        <a href="#" key={index} className={styles.socialLink}>
+                            {item.icon}
+                        </a>
+                    ))}
                 </div>
             </div>
         </footer>
-    );
+    )
 }
 
-export default Footer;
+export default Footer
